@@ -1,73 +1,105 @@
-[https://apify.com/epctex/amazon-scraper?fpr=yhdrb](https://apify.com/epctex/amazon-scraper?fpr=yhdrb)
+# Amazon Scraper Actor
 
-# Actor - Amazon Scraper
+## What is Amazon Scraper actor?
+The Amazon Scraper is a data scraping tool designed to simplify your market research on Amazon. It's the perfect assistant for extracting a great deal of detailed product information, customer reviews, and much more. Whether you're digging into specific product URLs or making a wide keyword search, this tool is your best assistant to get valuable insights from Amazon's massive e-commerce platform. Easy to use and incredibly flexible, the Amazon Scraper actor saves you time and effort, making your research process a breeze.
 
-## Amazon scraper
+### Key features
+- 🗝️ Versatile Keyword Search: Just type in a keyword, and the tool gathers a wide array of product details, including titles, descriptions, and features.
+- 🔗 Direct Product URL Scraping: Get in-depth information about a specific product by simply entering its URL.
+*(For instance, using the URL https://www.amazon.com/EXCELLENT-ELITE-SPANKER-Tactical-Adjustable/dp/B0725FT5ZW will fetch information for that particular product.)*
+- 📂 Category Scraping: Explore entire categories and gather data on all listed products with ease.
+*(For example, https://www.amazon.com/s?i=specialty-aps&bbn=16225007011&rh=n%3A16225007011%2Cn%3A1292115011 targets the Computer Monitors subcategory.)*
+- 🛒 Seller Products Fetching: Extract details on all products offered by a specific seller using their profile URL.
+- 🔍 Utilization of Search URLs: Direct Amazon search URLs can also be used for scraping.
+*(For example, the URL https://www.amazon.com/s?k=tactical+dog+harness can be used to scrape information on tactical dog harnesses.)*
+- 💬 In-depth Review Extraction: Dive deep into customer reviews to understand market sentiments towards any product.
+- 🌍 Multi-TLD Compatibility: The scraper supports various Amazon TLDs, enabling queries on different Amazon international websites like .com, .co.uk, .de, and others. This feature allows for a broader and more diverse data extraction, accommodating global market research and analysis.
+- 📍 Postal Code for Location Specificity: Refine your search results geographically by entering the local postal code, ensuring more relevant data collection. However, it's important to note that not all countries may support the location setting by postal code.
 
-The Amazon Product Scraper is a versatile web scraping tool designed to extract detailed product information and reviews from Amazon. This tool is highly flexible, allowing for multiple methods of data extraction based on different types of Amazon URLs or search keywords. Here's how you can utilize this scraper effectively:
+## Use Cases | Who Can Use Amazon Scraper
+- **Market researchers** to monitor market trends, consumer preferences, and competitive insights.
+- **E-commerce businesses** for optimizing product listings, pricing strategies, and understanding competitor offerings.
+- **Startups** to validate product ideas and identify niches within Amazon's marketplace.
+- Data analysts for **collecting large datasets for analysis, forecasting, and reporting**.
+- **Content creators** to generate product-related content by extracting detailed information and reviews.
+- Developers to **integrate Amazon data into apps or websites** for enhanced user experiences.
+- **Dropshippers** to identify profitable products to list in online stores.
+- Corporate strategists to **make informed decisions** on product launches, market entry, and expansion.
+- **Digital marketers** to tailor marketing campaigns based on in-depth product and market insights.
+- **Brand managers** to monitor brand presence, customer feedback, and market positioning on Amazon.
+- Academic researchers for **conducting studies on consumer behavior, e-commerce trends,** and product dynamics.
+- SEO specialists to improve product visibility and **search rankings on Amazon**.
 
--   **Keyword Search** - Simply enter any keyword to search Amazon. The scraper will retrieve a comprehensive range of product details, from titles and descriptions to categories and features. An example of the output for this method is provided below.
+## Input
+Either start with a keyword or specific store URLs to your research.
 
--   **Product URL Fetching** - Input the URL of a specific product to obtain its details. For instance, using the URL https://www.amazon.com/EXCELLENT-ELITE-SPANKER-Tactical-Adjustable/dp/B0725FT5ZW will fetch information for that particular product.
+💡When you want to scrape over a specific list URL, just copy and paste the link as one of the **startUrl**.
 
--   **Category Scraping** - By entering a category URL, the scraper can gather information on all products within that category. For example, https://www.amazon.com/s?i=specialty-aps&bbn=16225007011&rh=n%3A16225007011%2Cn%3A1292115011 targets the Computer Monitors subcategory.
+![](https://cdn.epctex.com/actors/amazon/1.png)
 
--   **Seller Products Fetching** - Utilize a seller's profile URL to extract data on all products they offer.
+If you start with a keyword, and you want to localize your search, you can choose a specific Amazon domain, and further localize it by entering a postal code.
 
--   **Using Search URLs** - Direct Amazon search URLs can also be used for scraping. For example, the URL https://www.amazon.com/s?k=tactical+dog+harness can be used to scrape information on tactical dog harnesses.
+![](https://cdn.epctex.com/actors/amazon/2.png)
 
--   **Review Extraction** - The scraper is capable of fetching reviews for any listed product. Detailed information on the required input parameters for this function is provided separately.
+You can limit the number of output results by either writing a number for number of listing items or list end page. Also, if you want to scrape product reviews too, don’t forget to switch it on, and limit the comments page if you want to.
 
--   **Multi-TLD Compatibility** - The scraper supports various Amazon TLDs, enabling queries on different Amazon international websites like .com, .co.uk, .de, and others. This feature allows for a broader and more diverse data extraction, accommodating global market research and analysis.
+💡If you would like to scrape only the first page of a list then put the link for the page and have the *endPage* as 1.
 
--   **Postal Code for Location Specificity** - Enhance the accuracy of your search by entering the local postal code, particularly useful when combined with the 'Amazon Country Domain' setting. This feature is designed to refine search results based on geographical location. However, it's important to note that not all countries may support the location setting by postal code.
+💡With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the *endPage* parameter as 6 then you'll have the 5th and 6th pages only.
 
+![](https://cdn.epctex.com/actors/amazon/3.png)
 
+It is recommended to keep the other options as default.
 
-## Bugs, fixes, updates, and changelog
+![](https://cdn.epctex.com/actors/amazon/4.png)
 
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/amazon-scraper/issues).
+### Input Parameters Explained
 
+- *search*: (Optional) (String)
+Enter the keyword for Amazon search. This keyword is used to find products related to your query on the Amazon platform.
+<br/>
 
-## Input Parameters
+- *startUrls*: (Optional) (Array)
+Specify URLs to initiate the scraping process. These should be either a list URL or a detail URL of the product or category you're interested in.
+<br/>
 
-- `search`: (Optional) (String) Enter the keyword for Amazon search. This keyword is used to find products related to your query on the Amazon platform..
+- *amazonTld*: (Optional) (String)
+Choose the specific Amazon top-level domain (TLD) that corresponds to your target country. For example, select 'Germany' to use amazon.de. This setting influences both search results and the functionality of the postal code feature. Ensure accurate selection for optimal location setting.
+<br/>
 
-- `startUrls`: (Optional) (Array) Specify URLs to initiate the scraping process. These should be either a list URL or a detail URL of the product or category you're interested in.
+- *postalCode*: (Optional) (String)
+Input the local postal code to increase the specificity of location-based data. This option should be utilized in conjunction with the 'Amazon Country Domain' setting. Please note that the effectiveness of this feature varies, as not all countries may support location filtering by postal code.
+<br/>
 
-- `amazonTld`: (Optional) (String) Choose the specific Amazon top-level domain (TLD) that corresponds to your target country. For example, select 'Germany' to use amazon.de. This setting influences both search results and the functionality of the postal code feature. Ensure accurate selection for optimal location setting.
+- *getReviews*: (Optional) (Bool)
+Toggle this option to enable the extraction of product reviews.
+<br/>
 
-- `postalCode`: (Optional) (String) Input the local postal code to increase the specificity of location-based data. This option should be utilized in conjunction with the 'Amazon Country Domain' setting. Please note that the effectiveness of this feature varies, as not all countries may support location filtering by postal code.
-  
-- `getReviews`: (Optional) (Bool) Toggle this option to enable the extraction of product reviews.
+- *reviewsEndPage*: (Optional) (Number)
+Specify the page number at which you wish to stop collecting reviews. By default, the scraper will continue until no more pages are available.
+<br/>
 
-- `reviewsEndPage`: (Optional) (Number) Specify the page number at which you wish to stop collecting reviews. By default, the scraper will continue until no more pages are available.
+- *maxItems*: (Optional) (Number)
+You can limit scraped items. This should be useful when you search through the big lists or search results.
+<br/>
 
-- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+- *proxy*: (Required) (Proxy Object)
+Proxy configuration.
+<br/>
 
-- `proxy`: (Required) (Proxy Object) Proxy configuration.
+- *extendOutputFunction*: (Optional) (String)
+Function that takes a JQuery handle ($) as an argument and returns an object with data.
+<br/>
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
-
-- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
+- *customMapFunction*: (Optional) (String)
+Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
-### Tip
-
-When you want to scrape over a specific list URL, just copy and paste the link as one of the **startUrl**.
-
-If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
-
-With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
-
-### Compute Unit Consumption
-
-The actor is optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all the detailed requests. If the actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.02-0.04 compute units.
-
-### Amazon Scraper Input examples
+### Amazon Scraper Input Examples
 
 #### Fetch a Single Product
+![](https://cdn.epctex.com/actors/amazon/5.png)
 
 ```json
 {
@@ -83,6 +115,7 @@ The actor is optimized to run blazing fast and scrape as many items as possible.
 ```
 
 #### Fetch Products of a Category
+![](https://cdn.epctex.com/actors/amazon/6.png)
 
 ```json
 {
@@ -98,6 +131,7 @@ The actor is optimized to run blazing fast and scrape as many items as possible.
 ```
 
 #### Fetch Results of a Search
+![](https://cdn.epctex.com/actors/amazon/7.png)
 
 ```json
 {
@@ -113,6 +147,7 @@ The actor is optimized to run blazing fast and scrape as many items as possible.
 ```
 
 #### Fetch Results of a Search by Keyword
+![](https://cdn.epctex.com/actors/amazon/8.png)
 
 ```json
 {
@@ -127,12 +162,14 @@ The actor is optimized to run blazing fast and scrape as many items as possible.
 ```
 
 #### Fetch Products of a Seller
+![](https://cdn.epctex.com/actors/amazon/9.png)
 
 ```json
 {
   "startUrls": [
     "https://www.amazon.com/sp?ie=UTF8&seller=A2OVB8DG3JN6N0"
   ],
+  "amazonTld": ".com",
   "endPage": 2,
   "maxItems": 10,
   "proxy": {
@@ -142,12 +179,14 @@ The actor is optimized to run blazing fast and scrape as many items as possible.
 ```
 
 #### Fetch Product Reviews
+![](https://cdn.epctex.com/actors/amazon/10.png)
 
 ```json
 {
   "startUrls": [
     "https://www.amazon.com/EXCELLENT-ELITE-SPANKER-Tactical-Adjustable/dp/B0725FT5ZW"
   ],
+  "amazonTld": ".com",
   "getReviews": true,
   "reviewsEndPage": 2,
   "endPage": 2,
@@ -158,22 +197,23 @@ The actor is optimized to run blazing fast and scrape as many items as possible.
 }
 ```
 
-## During the Run
+### Compute Unit Consumption
+The actor is optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all the detailed requests. If the actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.02-0.04 compute units.
 
-During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
-When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
+### Bugs, fixes, updates, and changelog
+This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/amazon-scraper/issues).
+
+## During the Run
+During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified. When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
 If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
-## Amazon Export
-
+### Amazon Export
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
 You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Amazon actor.
 
-## Scraped Amazon Properties
-
-The structure of each item in Amazon scraper looks like this:
+## Output
 
 ### Product Detail
 
@@ -307,5 +347,25 @@ The structure of each item in Amazon scraper looks like this:
 }
 ```
 
-## Contact 
+
+## How to use Amazon Scraper
+https://www.youtube.com/watch?v=Aa5SOI5EHNU&ab_channel=epctex
+
+## FAQ
+**Is it legal to scrape from Amazon?**
+It’s legal to extract public data from Amazon, however, personal information and sensitive data are not. ⚖️
+
+**Can I customize the data extracted by Amazon Scraper?**
+Yes, Amazon Scraper allows for customization in the data extraction process. Users can specify what information they need, such as specific product details or review types, making the tool versatile for different use cases. ⚙️
+
+**Can Amazon Scraper extract data from any Amazon region?**
+Yes, Amazon Scraper supports multiple Amazon top-level domains (TLDs), enabling users to extract data from various international Amazon websites. 🌍
+
+**Do I need technical skills to use Amazon Scraper?**
+Amazon Scraper is designed to be user-friendly, with a straightforward interface that requires minimal technical knowledge. Users can easily input their search criteria to start scraping data. 🛠️
+
+**Is there a limit to the amount of data I can scrape with Amazon Scraper?**
+While there is no fixed limit, users can set a maximum number of items to scrape to manage the scope of their data collection. This ensures that users can tailor the scraping process to their specific needs. 📏
+
+## Contact
 Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
