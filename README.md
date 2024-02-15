@@ -55,44 +55,36 @@ It is recommended to keep the other options as default.
 
 ### Input Parameters Explained
 
-- *search*: (Optional) (String)
-Enter the keyword for Amazon search. This keyword is used to find products related to your query on the Amazon platform.
-<br/>
+- `search`: (Optional) (String)
 
-- *startUrls*: (Optional) (Array)
-Specify URLs to initiate the scraping process. These should be either a list URL or a detail URL of the product or category you're interested in.
-<br/>
+	Enter the keyword for Amazon search. This keyword is used to find products related to your query on the Amazon platform.
+- `startUrls`: (Optional) (Array)
 
-- *amazonTld*: (Optional) (String)
-Choose the specific Amazon top-level domain (TLD) that corresponds to your target country. For example, select 'Germany' to use amazon.de. This setting influences both search results and the functionality of the postal code feature. Ensure accurate selection for optimal location setting.
-<br/>
+	Specify URLs to initiate the scraping process. These should be either a list URL or a detail URL of the product or category you're interested in.
+- `amazonTld`: (Optional) (String)
 
-- *postalCode*: (Optional) (String)
-Input the local postal code to increase the specificity of location-based data. This option should be utilized in conjunction with the 'Amazon Country Domain' setting. Please note that the effectiveness of this feature varies, as not all countries may support location filtering by postal code.
-<br/>
+	Choose the specific Amazon top-level domain (TLD) that corresponds to your target country. For example, select 'Germany' to use amazon.de. This setting influences both search results and the functionality of the postal code feature. Ensure accurate selection for optimal location setting.
+- `postalCode`: (Optional) (String)
 
-- *getReviews*: (Optional) (Bool)
-Toggle this option to enable the extraction of product reviews.
-<br/>
+	Input the local postal code to increase the specificity of location-based data. This option should be utilized in conjunction with the 'Amazon Country Domain' setting. Please note that the effectiveness of this feature varies, as not all countries may support location filtering by postal code.
+- `getReviews`: (Optional) (Bool)
 
-- *reviewsEndPage*: (Optional) (Number)
-Specify the page number at which you wish to stop collecting reviews. By default, the scraper will continue until no more pages are available.
-<br/>
+	Toggle this option to enable the extraction of product reviews.
+- `reviewsEndPage`: (Optional) (Number)
 
-- *maxItems*: (Optional) (Number)
-You can limit scraped items. This should be useful when you search through the big lists or search results.
-<br/>
+	Specify the page number at which you wish to stop collecting reviews. By default, the scraper will continue until no more pages are available.
+- `maxItems`: (Optional) (Number)
 
-- *proxy*: (Required) (Proxy Object)
-Proxy configuration.
-<br/>
+	You can limit scraped items. This should be useful when you search through the big lists or search results.
+- `proxy`: (Required) (Proxy Object)
 
-- *extendOutputFunction*: (Optional) (String)
-Function that takes a JQuery handle ($) as an argument and returns an object with data.
-<br/>
+	Proxy configuration.
+- `extendOutputFunction`: (Optional) (String)
 
-- *customMapFunction*: (Optional) (String)
-Function that takes each object's handle as an argument and returns the object with executing the function.
+	Function that takes a JQuery handle ($) as an argument and returns an object with data.
+- `customMapFunction`: (Optional) (String)
+
+	Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
