@@ -344,19 +344,19 @@ You can manage the results in any language (Python, PHP, Node JS/NPM). See the F
 https://www.youtube.com/watch?v=Aa5SOI5EHNU&ab_channel=epctex
 
 ## FAQ
-**Is it legal to scrape from Amazon?**
+**Is it legal to scrape from Amazon?**<br/>
 It’s legal to extract public data from Amazon, however, personal information and sensitive data are not. ⚖️
 
-**Can I customize the data extracted by Amazon Scraper?**
+**Can I customize the data extracted by Amazon Scraper?**<br/>
 Yes, Amazon Scraper allows for customization in the data extraction process. Users can specify what information they need, such as specific product details or review types, making the tool versatile for different use cases. ⚙️
 
-**Can Amazon Scraper extract data from any Amazon region?**
+**Can Amazon Scraper extract data from any Amazon region?**<br/>
 Yes, Amazon Scraper supports multiple Amazon top-level domains (TLDs), enabling users to extract data from various international Amazon websites. 🌍
 
-**Do I need technical skills to use Amazon Scraper?**
+**Do I need technical skills to use Amazon Scraper?**<br/>
 Amazon Scraper is designed to be user-friendly, with a straightforward interface that requires minimal technical knowledge. Users can easily input their search criteria to start scraping data. 🛠️
 
-**Is there a limit to the amount of data I can scrape with Amazon Scraper?**
+**Is there a limit to the amount of data I can scrape with Amazon Scraper?**<br/>
 While there is no fixed limit, users can set a maximum number of items to scrape to manage the scope of their data collection. This ensures that users can tailor the scraping process to their specific needs. 📏
 
 ## Contact
