@@ -51,7 +51,7 @@ You can limit the number of output results by either writing a number for number
 
 It is recommended to keep the other options as default.
 
-![](https://cdn.epctex.com/actors/amazon/4.png)
+![](https://cdn.epctex.com/actors/amazon/4.png?refresh=)
 
 ### Input Parameters Explained
 
