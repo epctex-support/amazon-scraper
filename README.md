@@ -1,3 +1,5 @@
+[https://apify.com/epctex/amazon-scraper](https://apify.com/epctex/amazon-scraper?fpr=yhdrb)
+
 # Amazon Scraper Actor
 
 ## What is Amazon Scraper actor?
