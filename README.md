@@ -362,4 +362,4 @@ Amazon Scraper is designed to be user-friendly, with a straightforward interface
 While there is no fixed limit, users can set a maximum number of items to scrape to manage the scope of their data collection. This ensures that users can tailor the scraping process to their specific needs. 📏
 
 ## Contact
-Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [business@epctex.com](mailto:business@epctex.com) is at your service.
